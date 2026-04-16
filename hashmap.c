@@ -60,7 +60,7 @@ HashMap * createMap(long capacity) {
 
 void insertMap(HashMap * map, char * key, void * value) {
     int pos = hash(key, map -> capacity);
-    while(map -> buckets[pos] != NULL || map -> buckets[pos] -> value != -1){
+    while(map -> buckets[pos] != NULL || map -> buckets[pos] -> key != -1){
         pos ++;
     }
     return pos;
