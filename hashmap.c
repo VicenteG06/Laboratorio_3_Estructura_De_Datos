@@ -53,6 +53,7 @@ HashMap * createMap(long capacity) {
     
     nuevo -> size = 0;
     nuevo -> capacity = capacity;
+    nuevo -> current = -1;
     return nuevo;
 }
 
