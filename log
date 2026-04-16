@@ -315,3 +315,14 @@ hashmap.c:53:22: error: assignment to ‘long int’ from ‘void *’ makes int
    53 |     nuevo -> current = NULL;
       |                      ^
 1daa80d
+Thu Apr 16 08:48:50 PM UTC 2026: 
+ hashmap.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘createMap’:
+hashmap.c:54:29: error: statement with no effect [-Werror=unused-value]
+   54 |         nuevo -> buckets[i] == NULL;
+      |                             ^
+cc1: all warnings being treated as errors
+365ad7b

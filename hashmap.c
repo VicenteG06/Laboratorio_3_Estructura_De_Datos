@@ -48,9 +48,14 @@ HashMap * createMap(long capacity) {
     HashMap* nuevo = malloc(sizeof(HashMap));
     nuevo -> buckets = (Pair **) calloc(capacity, sizeof(Pair *));
     if(nuevo -> buckets == NULL) exit(EXIT_FAILURE);
+    for(long i = 0; i < capacity; i++){
+        nuevo -> buckets[i] -> key = NULL;
+        nuevo -> buckets[i] -> value = NULL;
+        nuevo -> buckets[i] == NULL;
+    }
     nuevo -> size = 0;
     nuevo -> capacity = capacity;
-    nuevo -> current = NULL;
+    nuevo -> current = 0;
     return nuevo;
 }
 
