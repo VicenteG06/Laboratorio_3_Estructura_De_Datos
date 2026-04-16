@@ -51,7 +51,7 @@ HashMap * createMap(long capacity) {
     for(long i = 0; i < capacity; i++){
         nuevo -> buckets[i] -> key = NULL;
         nuevo -> buckets[i] -> value = NULL;
-        nuevo -> buckets[i] == NULL;
+        nuevo -> buckets[i] = NULL;
     }
     nuevo -> size = 0;
     nuevo -> capacity = capacity;
