@@ -50,7 +50,7 @@ HashMap * createMap(long capacity) {
     if(nuevo -> buckets == NULL) exit(EXIT_FAILURE);
     nuevo -> size = 0;
     nuevo -> capacity = capacity;
-    nuevo -> current = 0;
+    nuevo -> current = NULL;
     return nuevo;
 }
 
