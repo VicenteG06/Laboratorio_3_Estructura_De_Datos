@@ -61,9 +61,10 @@ HashMap * createMap(long capacity) {
 void insertMap(HashMap * map, char * key, void * value) {
     int pos = hash(key, map -> capacity);
     while(map -> buckets[pos] != NULL || map -> buckets[pos] -> key != NULL){
-        pos ++;
+        pos = (pos + 1) % map -> capacity;
     }
-    
+    Pair* nuevo = createPair(key, value);
+    map -> buckets[pos] = nuevo;
 }
 
 // 3. Implemente la función Pair * searchMap(HashMap * map, char * key), la cual retorna el Pair asociado a la clave ingresada. 
