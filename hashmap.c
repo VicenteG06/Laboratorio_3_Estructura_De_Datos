@@ -60,8 +60,7 @@ HashMap * createMap(long capacity) {
 
 void insertMap(HashMap * map, char * key, void * value) {
     long pos = hash(key, map -> capacity);
-    if(pos == NULL) return;
-    while(map -> buckets[pos] != NULL || map -> buckets[pos] -> key != NULL){
+    while(map -> buckets[pos] != NULL || map -> buckets[pos] -> value != NULL){
         pos = (pos + 1) % map -> capacity;
     }
     Pair* nuevo = createPair(key, value);
