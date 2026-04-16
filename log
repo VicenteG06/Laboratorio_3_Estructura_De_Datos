@@ -1,0 +1,25 @@
+Thu Apr 16 08:05:43 PM UTC 2026: 
+ hashmap.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:62:20: error: passing argument 1 of ‘hash’ makes pointer from integer without a cast [-Wint-conversion]
+   62 |     int pos = hash(*key, map -> capacity);
+      |                    ^~~~
+      |                    |
+      |                    char
+hashmap.c:28:19: note: expected ‘char *’ but argument is of type ‘char’
+   28 | long hash( char * key, long capacity) {
+      |            ~~~~~~~^~~
+hashmap.c:63:71: error: comparison between pointer and integer [-Werror]
+   63 |     while(map -> buckets[pos] != NULL || map -> buckets[pos] -> value != -1){
+      |                                                                       ^~
+hashmap.c:66:12: error: ‘return’ with a value, in function returning void [-Wreturn-mismatch]
+   66 |     return pos;
+      |            ^~~
+hashmap.c:61:6: note: declared here
+   61 | void insertMap(HashMap * map, char * key, void * value) {
+      |      ^~~~~~~~~
+cc1: all warnings being treated as errors
+692160f
