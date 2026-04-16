@@ -140,3 +140,13 @@ Thu Apr 16 08:15:35 PM UTC 2026:
  1 file changed, 1 insertion(+)
  tests:  0|0
 38ce119
+Thu Apr 16 08:16:54 PM UTC 2026: 
+ hashmap.c | 1 +
+ 1 file changed, 1 insertion(+)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:69:20: error: assignment to ‘long int’ from ‘Pair *’ makes integer from pointer without a cast [-Wint-conversion]
+   69 |     map -> current = map -> buckets[pos];
+      |                    ^
+fbd8608
