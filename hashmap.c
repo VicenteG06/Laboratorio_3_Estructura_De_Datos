@@ -125,13 +125,13 @@ Pair * firstMap(HashMap * map) {
 
 Pair * nextMap(HashMap * map) {
     long pos = (map -> current + 1) % (map -> capacity);
-    while(pos != map -> current){
+    long actual = map -> current;
+    while(pos != actual){
         if(map -> buckets[pos] != NULL && map -> buckets[pos] -> key != NULL){
             map -> current = pos;
             return map -> buckets[pos];
         }
         pos = (pos + 1) % (map -> capacity);
-        if(pos == map -> current) break;
     }
     return NULL;
 }
