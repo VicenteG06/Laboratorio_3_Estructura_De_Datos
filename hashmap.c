@@ -147,7 +147,7 @@ void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
     Pair ** old_buckets = map -> buckets;
     long vieja_capacidad = map -> capacity;
-    map -> capacity = map -> capacity * 2
+    map -> capacity = map -> capacity * 2;
     map -> buckets = (Pair **) calloc(map -> capacity, sizeof(Pair *));
     for(long i = 0; i < vieja_capacidad; i++){
         insertMap(map, old_buckets[i] -> key, old_buckets[i] -> value);
