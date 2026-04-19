@@ -104,6 +104,7 @@ Pair * searchMap(HashMap * map,  char * key) {
 
 void eraseMap(HashMap * map,  char * key) {    
     Pair * a_borrar = searchMap(map, key);
+    if(a_borrar == NULL) return;
     a_borrar -> key = NULL;
     map -> size -= 1;
 }
