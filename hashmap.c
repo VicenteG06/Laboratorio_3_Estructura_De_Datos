@@ -114,8 +114,7 @@ void eraseMap(HashMap * map,  char * key) {
 // Recuerde actualizar el índice.
 
 Pair * firstMap(HashMap * map) {
-    long pos = 0;
-    for(pos; pos < map -> capacity; pos++){
+    for(long pos = 0; pos < map -> capacity; pos++){
          if(map -> buckets[pos] != NULL && map -> buckets[pos] -> key != NULL) return map -> buckets[pos];
     }
     return NULL;
