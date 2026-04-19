@@ -487,3 +487,23 @@ Sun Apr 19 04:01:01 AM UTC 2026:
  tests:  13|2
 total_score: 40/60
 d4c9344
+Sun Apr 19 06:19:03 AM UTC 2026: 
+ hashmap.c | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:150:42: error: expected ‘;’ before ‘map’
+  150 |     map -> capacity = map -> capacity * 2
+      |                                          ^
+      |                                          ;
+  151 |     map -> buckets = (Pair **) calloc(map -> capacity, sizeof(Pair *));
+      |     ~~~                                   
+hashmap.c:152:29: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘vieja_capacidad’
+  152 |     for(long i = 0; i < map -> vieja_capacidad; i++){
+      |                             ^~
+hashmap.c:149:10: error: unused variable ‘vieja_capacidad’ [-Werror=unused-variable]
+  149 |     long vieja_capacidad = map -> capacity;
+      |          ^~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+4c9b34e
