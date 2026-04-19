@@ -464,3 +464,14 @@ hashmap.c:118:14: note: ‘pos’ was declared here
       |              ^~~
 cc1: all warnings being treated as errors
 6ce078b
+Sun Apr 19 03:59:51 AM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:118:5: error: statement with no effect [-Werror=unused-value]
+  118 |     for(pos; pos < map -> capacity; pos++){
+      |     ^~~
+cc1: all warnings being treated as errors
+09742a7
