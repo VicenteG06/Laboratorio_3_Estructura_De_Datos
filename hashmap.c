@@ -129,7 +129,7 @@ Pair * nextMap(HashMap * map) {
         pos = (pos + 1) % (map -> capacity);
         if(pos == map -> current) return NULL;
     }
-    return buckets[pos];
+    return map -> buckets[pos];
 }
 
 
