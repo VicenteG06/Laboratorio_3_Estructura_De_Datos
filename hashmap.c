@@ -130,7 +130,7 @@ Pair * nextMap(HashMap * map) {
         pos = (pos + 1) % (map -> capacity);
     }
     map -> current = pos;
-    return map -> buckets[pos] -> value;
+    return map -> buckets[pos];
 }
 
 
