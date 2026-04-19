@@ -115,7 +115,9 @@ void eraseMap(HashMap * map,  char * key) {
 
 Pair * firstMap(HashMap * map) {
     long pos = 0;
-    if(map -> buckets[pos] != NULL && map -> buckets[pos] -> key != NULL) return map -> buckets[pos];
+    for(long pos; pos < map -> capacity; pos++){
+         if(map -> buckets[pos] != NULL && map -> buckets[pos] -> key != NULL) return map -> buckets[pos];
+    }
     return NULL;
 }
 
