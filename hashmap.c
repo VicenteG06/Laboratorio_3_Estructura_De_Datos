@@ -124,9 +124,8 @@ Pair * firstMap(HashMap * map) {
 }
 
 Pair * nextMap(HashMap * map) {
-    long pos = (map -> current + 1) % (map -> capacity);
-    long actual = map -> current;
-    while(pos != actual){
+    long pos = (map -> current) % (map -> capacity) + 1;
+    while(pos != map -> current){
         if(map -> buckets[pos] != NULL && map -> buckets[pos] -> key != NULL){
             map -> current = pos;
             return map -> buckets[pos];
