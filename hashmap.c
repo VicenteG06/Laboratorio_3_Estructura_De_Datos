@@ -87,6 +87,7 @@ void insertMap(HashMap * map, char * key, void * value) {
 // Recuerde actualizar el índice current a la posición encontrada. Recuerde que el arreglo es circular.
 
 Pair * searchMap(HashMap * map,  char * key) {   
+    if(map == NULL || key == NULL) return NULL;
     long pos = hash(key, map -> capacity);
     while(map -> buckets[pos] != NULL){
         if(strcmp(map -> buckets[pos] -> key, key) == 0){
@@ -105,6 +106,7 @@ Pair * searchMap(HashMap * map,  char * key) {
 // Recuerde actualizar la variable size.
 
 void eraseMap(HashMap * map,  char * key) {    
+    if(map == NULL || map -> current == -1) return;
     Pair * a_borrar = searchMap(map, key);
     if(a_borrar == NULL) return;
     a_borrar -> key = NULL;
